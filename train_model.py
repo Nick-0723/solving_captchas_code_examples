@@ -9,6 +9,7 @@ from keras.models import Sequential
 from keras.layers.convolutional import Conv2D, MaxPooling2D
 from keras.layers.core import Flatten, Dense
 from helpers import resize_to_fit
+import pdb
 
 
 LETTER_IMAGES_FOLDER = "extracted_letter_images"
@@ -34,6 +35,8 @@ for image_file in paths.list_images(LETTER_IMAGES_FOLDER):
 
     # Grab the name of the letter based on the folder it was in
     label = image_file.split(os.path.sep)[-2]
+
+    pdb.set_trace()
 
     # Add the letter image and it's label to our training data
     data.append(image)
